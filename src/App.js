@@ -1,62 +1,75 @@
-import React from "react";
-import { AppBar, Toolbar, Typography, Container, Button } from "@mui/material";
-import { styled } from "@mui/system";
+import React, { useState } from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link,
+  Outlet,
+} from "react-router-dom";
 
-const CustomAppBar = styled(AppBar)({
-  backgroundColor: "#4FB65E",
-  color: "black",
-});
+import "./App.css"; // You can create a corresponding CSS file for styling
 
-const useStyles = {
-  container: {
-    paddingTop: 4,
-  },
-  button: {
-    minWidth: 120,
-    borderRadius: 20, // Set border radius to make it rounded
-    boxShadow: "none",
-    backgroundColor: "#222222",
-    "&:hover": {
-      backgroundColor: "#000000", // Change the hover background color here
-    },
-  },
-};
+import Home from "./components/Home/Home";
+import Contact from "./components/contact-us/contact";
 
-function App() {
+const App = () => {
+  const Navigation = () => {
+    const [selectedPage, setSelectedPage] = useState("home");
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+    const toggleMobileMenu = () => {
+      setIsMobileMenuOpen(!isMobileMenuOpen);
+    };
+
+    return (
+      <nav className="navigation">
+        <div className="logo">Your Logo</div>
+        <div className={`nav-links ${isMobileMenuOpen ? "active" : ""}`}>
+          <ul>
+            <li>
+              <Link
+                to="/"
+                onClick={() => {
+                  setSelectedPage("home");
+                  setIsMobileMenuOpen(false);
+                }}
+                className={selectedPage === "home" ? "selected" : ""}
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/contact-us"
+                onClick={() => {
+                  setSelectedPage("contact-us");
+                  setIsMobileMenuOpen(false);
+                }}
+                className={selectedPage === "contact-us" ? "selected" : ""}
+              >
+                Contact Us
+              </Link>
+            </li>
+          </ul>
+        </div>
+        <div className="hamburger-menu" onClick={toggleMobileMenu}>
+          &#9776;
+        </div>
+      </nav>
+    );
+  };
+
   return (
-    <div className="App">
-      <CustomAppBar position="static">
-        <Toolbar
-          sx={{
-            justifyContent: "space-between", // Align items to the right
-          }}
-        >
-          <Typography variant="h6">Algo Trade Tech</Typography>
-          <div>
-            <Button
-              variant="contained"
-              sx={[useStyles.button, { marginRight: 2 }]}
-            >
-              Home
-            </Button>
-            <Button variant="contained" sx={useStyles.button}>
-              Training
-            </Button>
-          </div>
-        </Toolbar>
-      </CustomAppBar>
-
-      <Container sx={useStyles.container}>
-        <Typography variant="h4" gutterBottom>
-          Welcome to My Material-UI Homepage
-        </Typography>
-        <Typography variant="body1">
-          This is a simple homepage designed using Material-UI's top navigation
-          bar.
-        </Typography>
-      </Container>
-    </div>
+    <Router>
+      <Navigation />
+      <Routes>
+        <Route element={<Outlet />}>
+          <Route path="/" element={<Home />} />
+          <Route path="contact-us" element={<Contact />} />
+        </Route>
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;

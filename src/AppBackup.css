@@ -1,0 +1,80 @@
+/* Top Navigation Styles */
+/* ul */
+.top-navigation ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: right; /* Align items to the right */
+}
+
+/* ul li */
+.top-navigation ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* ul li a */
+.top-navigation ul li a {
+  text-decoration: none;
+  color: black;
+  padding: 10px 15px;
+}
+
+/* ul li a selected and hover */
+.top-navigation ul li a.selected,
+.top-navigation ul li a:hover {
+  background-color: black;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* cart count */
+.top-navigation ul li div {
+  margin-left: 5px;
+  background-color: #9a0000;
+  padding: 1px 5px;
+  border-radius: 10px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  color: white;
+}
+
+/* main nav style */
+.top-navigation {
+  background-color: #f2f2f2;
+  padding: 1.5rem 1rem 1.5rem 1rem;
+  margin-bottom: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.cart-tab {
+  display: flex;
+}
+
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+  /* Show Hamburger Icon on Mobile */
+  .hamburger {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 24px;
+    padding: 5px;
+  }
+
+  /* Hide the regular navigation on mobile */
+  .top-navigation ul {
+    display: none;
+  }
+
+  /* Show the navigation when the menu is open */
+  .top-navigation.open ul {
+    display: block;
+  }
+}
