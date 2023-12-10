@@ -1,0 +1,114 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: #f2f2f2;
+  position: sticky;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  top: 0;
+}
+
+.logo {
+  font-family: "light", sans-serif;
+  font-size: 1.5rem;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-links li {
+  margin-left: 1rem;
+  display: inline-block;
+}
+
+/* ul li a */
+.nav-links ul li a {
+  font-family: "regular", sans-serif;
+  font-size: 15px;
+  text-decoration: none;
+  color: black;
+  padding: 10px 15px;
+}
+
+/* ul li a selected and hover */
+.nav-links ul li a.selected,
+.nav-links ul li a:hover {
+  background-color: black;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.hamburger-menu {
+  font-size: 24px;
+  padding: 5px;
+  cursor: pointer;
+  display: none;
+  flex-direction: column;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 72px;
+    right: 0;
+    background-color: #f2f2f2;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  /* disable <a> padding */
+  .nav-links ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 0 0;
+  }
+
+  /* disable hover and selected effect */
+  .nav-links ul li a.selected,
+  .nav-links ul li a:hover {
+    background-color: transparent;
+    color: initial;
+    padding: initial;
+    border-radius: initial;
+    cursor: initial;
+  }
+
+  .nav-links.active {
+    display: flex;
+    flex-direction: column; /* Change to column for vertical alignment */
+  }
+
+  .nav-links ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column; /* Add this line to make <ul> vertical */
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-links li {
+    margin-left: 0; /* Remove the left margin for <li> elements */
+    margin-bottom: 0.5rem; /* Add some bottom margin for better spacing */
+    opacity: 0; /* Start with 0 opacity */
+    transform: translateY(-20px); /* Move the element up */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Add a smooth transition */
+  }
+
+  .nav-links.active li {
+    opacity: 1; /* Fade in by setting opacity to 1 */
+    transform: translateY(
+      0
+    ); /* Move the element back to its original position */
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
+}
