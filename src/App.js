@@ -10,8 +10,8 @@ import "./App.css";
 
 import Navigation from "./components/navigation";
 
-import Home from "./pages/Home/Home";
-import Contact from "./pages/contact-us/contact";
+import Home from "./pages/home";
+import Contact from "./pages/contact-us";
 
 const App = () => {
   return (
@@ -19,7 +19,7 @@ const App = () => {
       <Navigation />
       <Routes>
         <Route element={<Outlet />}>
-          <Route path="/" element={<Home />} />
+          <Route path="/" index element={<Home />} />
           <Route path="contact-us" element={<Contact />} />
         </Route>
       </Routes>

@@ -1,1 +1,10 @@
-@import url('./fonts.css');
+@import url("./fonts.css");
+
+.div-bottom-spacing {
+  margin-bottom: 7.5rem;
+}
+
+.gradient-container {
+    margin: 1px;
+    background-image: linear-gradient(to right, #Fbc2eb , #a6c1ee);
+}
