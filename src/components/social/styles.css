@@ -1,0 +1,17 @@
+
+.social-tile {
+  cursor: pointer;
+}
+
+.icon {
+  width: 25px;
+  height: 25px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.name {
+  font-size: 12px;
+}

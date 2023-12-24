@@ -1,5 +1,13 @@
-body, html, #root, #root > div {
+body,
+html,
+#root,
+#root > div {
   height: 100%;
+  font-family: "regular";
+}
+
+.row > * {
+  padding: 0;
 }
 
 .no-bottom-margin {
@@ -17,4 +25,21 @@ body, html, #root, #root > div {
 
 .divider {
   background-color: silver;
+}
+
+/* font styles */
+.light {
+  font-family: "light";
+}
+
+.regular {
+  font-family: "regular";
+}
+
+.medium {
+  font-family: "medium";
+}
+
+.semi-bold {
+  font-family: "semiBold";
 }
