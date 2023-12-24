@@ -1,3 +1,20 @@
 body, html, #root, #root > div {
   height: 100%;
 }
+
+.no-bottom-margin {
+  margin-bottom: 0;
+}
+
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.container-fluid .row {
+  padding: 0;
+}
+
+.divider {
+  background-color: silver;
+}
