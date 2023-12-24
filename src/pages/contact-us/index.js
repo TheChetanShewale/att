@@ -1,57 +1,34 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { remove } from "../../store/cartSlice";
-
-import "./styles.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const Contact = () => {
-  const productsInCart = useSelector((state) => state.cart);
-  const dispatch = useDispatch();
-
-  const calculateTotal = () => {
-    let total = 0;
-    productsInCart.forEach((product) => {
-      total += product.price;
-    });
-    return total;
-  };
-
   return (
-    <div className="cart-product-list">
-      {productsInCart.length > 0 && (
-        <div className="cart-total-wrapper">
-          <div className="cart-total">Total: </div>
-          <div>{`RS ${calculateTotal().toFixed(2)}`}/-</div>
+    <div className="container-fluid h-100">
+      <div className="row h-100">
+        {/* Left Column (Decreased from col-sm-3 to col-sm-2) */}
+        <div className="col-sm-2 d-none d-sm-block bg-info p-3">
+          {/* Content for the left column goes here */}
+          Left Column
         </div>
-      )}
-      {!productsInCart.length ? (
-        <div>Cart is empty</div>
-      ) : (
-        productsInCart.map((product) => (
-          <div key={product.id} className="cart-product-item">
-            <div className="cart-product-image-container">
-              <img
-                src={product.image}
-                alt={product.title}
-                className="cart-product-image"
-              />
-            </div>
-            <div className="cart-product-info">
-              <h2 className="cart-product-title">{product.title}</h2>
-              <p className="cart-product-description">{product.description}</p>
-              <p className="cart-product-price">{`Price: RS ${product.price.toFixed(
-                2
-              )}/-`}</p>
-              <div
-                className="remove-from-cart"
-                onClick={() => dispatch(remove(product.id))}
-              >
-                Remove
-              </div>
-            </div>
+
+        {/* Center Column (Increased from col-sm-6 to col-sm-8) */}
+        <div className="col-sm-8 bg-success d-flex align-items-center justify-content-center p-3">
+          {/* First Section */}
+          <div className="text-center">
+            <h2>Take the first step towards your profitable journey today!</h2>
+            <p className="mt-3">
+              Welcome to AlgoTradeTech, We believe in accuracy and consistency
+              in trading and investments.
+            </p>
           </div>
-        ))
-      )}
+        </div>
+
+        {/* Right Column (Decreased from col-sm-3 to col-sm-2) */}
+        <div className="col-sm-2 d-none d-sm-block bg-warning p-3">
+          {/* Content for the right column goes here */}
+          Right Column
+        </div>
+      </div>
     </div>
   );
 };

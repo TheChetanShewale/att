@@ -1,3 +1,25 @@
+@font-face {
+  font-family: "light";
+  src: local("light"), url("./fonts/Montserrat-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "regular";
+  src: local("regular"),
+    url("./fonts/Montserrat-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "medium";
+  src: local("medium"), url("./fonts/Montserrat-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "semiBold";
+  src: local("semiBold"),
+    url("./fonts/Montserrat-SemiBold.ttf") format("truetype");
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +27,4 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }
