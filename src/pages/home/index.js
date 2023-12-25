@@ -5,19 +5,19 @@ import "./styles.css";
 import Social from "../../components/social";
 
 import playstore from "../../assets/playstore.png";
+import Divider from "../../components/divider";
+import Features from "../../components/feature";
 
 const Home = ({ navbarHeight }) => {
-  const adjustedHeight = `calc(100% - ${navbarHeight}px)`;
-
   return (
-    <div className="container-fluid h-100">
-      <div className="row h-100">
+    <div className="container-fluid">
+      <div className="row">
         {/* Left Column */}
         <div className="col-sm-1 d-none d-sm-block bg-success p-3" />
         {/* Center Column */}
         <div
           className="col-sm-10 d-flex align-items-center justify-content-center"
-          style={{ height: adjustedHeight }}
+          style={{ marginTop: `${navbarHeight}px` }}
         >
           {/* First Section */}
           <div className="text-center">
@@ -63,6 +63,19 @@ const Home = ({ navbarHeight }) => {
             <div className="col-sm-12 mt-3 d-flex align-items-center justify-content-center">
               <Social />
             </div>
+
+            <Divider classes={"mt-4 mb-4"} />
+
+            {/*Section 2*/}
+            <h4 className="medium">Why Us?</h4>
+            <p className="why-us-desc p-4">
+              By spending years, we have bundled all the curated crux of trading
+              in our trainings and our own product (AutoTrade), which will help
+              you to reach your destination of being a profitable trader faster
+              along with our below mentioned unique features and much more!
+            </p>
+            <h4 className="medium">What makes us unique?</h4>
+            <Features />
           </div>
         </div>
         {/* Right Column */}
