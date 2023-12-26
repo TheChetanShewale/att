@@ -1,8 +1,53 @@
 .follow-us-divider {
   height: 0.5px;
   width: 15%;
+  background-color: black;
 }
 
 .why-us-desc {
   font-size: 13px;
 }
+
+.mesh {
+  padding-top: 30px;
+  border-radius: 20px;
+}
+
+.grad {
+  background-color:#ffa399;
+  background-image:
+  radial-gradient(at 30% 17%, hsla(231,91%,69%,1) 0px, transparent 50%),
+  radial-gradient(at 85% 47%, hsla(215,62%,74%,1) 0px, transparent 50%),
+  radial-gradient(at 7% 98%, hsla(359,67%,60%,1) 0px, transparent 50%),
+  radial-gradient(at 17% 12%, hsla(329,96%,64%,1) 0px, transparent 50%),
+  radial-gradient(at 35% 74%, hsla(66,76%,75%,1) 0px, transparent 50%),
+  radial-gradient(at 8% 69%, hsla(37,80%,65%,1) 0px, transparent 50%),
+  radial-gradient(at 55% 43%, hsla(292,65%,74%,1) 0px, transparent 50%);
+}
+
+/*.grad {
+  background-color:#f699ff;
+  background-image:
+  radial-gradient(at 11% 98%, hsla(201,64%,71%,1) 0px, transparent 50%),
+  radial-gradient(at 58% 21%, hsla(258,79%,72%,1) 0px, transparent 50%),
+  radial-gradient(at 16% 38%, hsla(303,62%,70%,1) 0px, transparent 50%),
+  radial-gradient(at 33% 92%, hsla(30,87%,64%,1) 0px, transparent 50%),
+  radial-gradient(at 73% 4%, hsla(213,71%,66%,1) 0px, transparent 50%),
+  radial-gradient(at 54% 84%, hsla(300,70%,62%,1) 0px, transparent 50%),
+  radial-gradient(at 17% 35%, hsla(140,64%,65%,1) 0px, transparent 50%);
+}
+
+.grad {
+  background-color: hsla(0, 100%, 50%, 1);
+  background-image: radial-gradient(
+      at 40% 20%,
+      hsla(28, 100%, 74%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 80% 0%, hsla(189, 100%, 56%, 1) 0px, transparent 50%),
+    radial-gradient(at 0% 50%, hsla(355, 100%, 93%, 1) 0px, transparent 50%),
+    radial-gradient(at 80% 50%, hsla(340, 100%, 76%, 1) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, hsla(22, 100%, 77%, 1) 0px, transparent 50%),
+    radial-gradient(at 80% 100%, hsla(242, 100%, 70%, 1) 0px, transparent 50%),
+    radial-gradient(at 0% 0%, hsla(343, 100%, 76%, 1) 0px, transparent 50%);
+}*/
