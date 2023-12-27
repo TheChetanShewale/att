@@ -1,10 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useMediaQuery } from "react-responsive";
 import "./styles.css";
 
 import people from "../../assets/people.png";
 
 const Products = () => {
+  const isDesktop = useMediaQuery({ minWidth: 768 }); // Set the breakpoint as needed
+
   const data = [
     {
       icon: people,
@@ -15,6 +18,7 @@ const Products = () => {
         "Automated entry and exits depending on market conditions*",
         "Built for generating good returns over a specific period of time*",
         "Automated SL/Target calculation and order placement*",
+        "Affordable subscriptions",
       ],
     },
     {
@@ -28,6 +32,7 @@ const Products = () => {
         "Live trading sessions for better understanding",
         "Mentoring community access for post training support and handholding",
         "In person support via chats and emails post training",
+        "Affordable enrollment fees",
       ],
     },
     {
@@ -41,38 +46,59 @@ const Products = () => {
         "Mini and micro batches",
         "Dedicated doubt solving sessions after every training session",
         "In person support via chats and emails post training",
+        "Affordable enrollment fees",
       ],
     },
   ];
 
-  return (
-    <div className="d-flex flex-wrap mt-4 justify-content-center">
-      {data.map((item, index) => (
-        <div
-          key={index}
-          style={{ flexBasis: `calc(30% - 10px)`, marginBottom: 10 }}
-        >
-          <div className="card-container">
-            <div className="feature-icon-container">
-              <img className="feature-icon" src={item.icon} alt={item.title} />
-            </div>
-            <h6 className="mt-2 medium">{item.title}</h6>
-            <div className="mt-4 key-features medium">Key Features:</div>
-            <ul className="desc">
-              {item.desc.map((item, index) => (
-                <li key={index} className="mb-3">
-                  {item}
-                </li>
-              ))}
-            </ul>
-            <div className="btn-container">
-              <Link to="/" className="btn btn-dark">
-                Check Details
-              </Link>
-            </div>
-          </div>
+  const returnCard = (item) => {
+    return (
+      <div className="card-container d-flex flex-column">
+        <div className="feature-icon-container">
+          <img className="feature-icon" src={item.icon} alt={item.title} />
         </div>
-      ))}
+        <h6 className="mt-2 medium">{item.title}</h6>
+        <div className="mt-4 key-features medium">Key Features:</div>
+        <ul className="desc">
+          {item.desc.map((item, index) => (
+            <li key={index} className="mb-3">
+              {item}
+            </li>
+          ))}
+        </ul>
+        <div className="btn-container mt-auto">
+          <Link to="/" className="btn btn-dark">
+            Check Details
+          </Link>
+        </div>
+      </div>
+    );
+  };
+
+  return (
+    <div>
+      {isDesktop ? (
+        <div className="d-flex flex-wrap mt-4 justify-content-center">
+          {data.map((item, index) => (
+            <div
+              key={index}
+              style={{ flexBasis: `calc(30% - 10px)`, marginBottom: 10 }}
+            >
+              {returnCard(item)}
+            </div>
+          ))}
+        </div>
+      ) : (
+        <div>
+          {data.map((item, index) => (
+            <div className="w-100 mt-4 justify-content-center">
+              <div key={index} className="mb-4">
+                <div className="w-100">{returnCard(item)}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 };

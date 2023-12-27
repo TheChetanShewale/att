@@ -1,3 +1,13 @@
+.desktop-styles {
+  margin-left: 20px;
+}
+
+.mobile-styles {
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
 .follow-us-divider {
   height: 0.5px;
   width: 15%;

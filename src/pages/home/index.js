@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import { useMediaQuery } from "react-responsive";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles.css";
 
@@ -7,9 +8,9 @@ import Social from "../../components/social";
 import playstore from "../../assets/playstore.png";
 import Divider from "../../components/divider";
 import Products from "../../components/products";
-import Features from "../../components/feature";
 
 const Home = ({ navbarHeight }) => {
+  const isDesktop = useMediaQuery({ minWidth: 768 }); // Set the breakpoint as needed
   const productsHeaderRef = useRef();
 
   const scrollToProducts = () => {
@@ -22,6 +23,40 @@ const Home = ({ navbarHeight }) => {
       behavior: "smooth",
     });
   };
+
+  const DesktopButtons = () => (
+    <>
+      <button type="button" className="btn btn-dark" onClick={scrollToProducts}>
+        Learn More
+      </button>
+      <button
+        type="button"
+        className="btn btn-dark desktop-styles"
+        onClick={scrollToProducts}
+      >
+        Products and Services
+      </button>
+    </>
+  );
+
+  const MobileButtons = () => (
+    <>
+      <button
+        type="button"
+        className="btn btn-dark mobile-styles"
+        onClick={scrollToProducts}
+      >
+        Learn More
+      </button>
+      <button
+        type="button"
+        className="btn btn-dark mobile-styles"
+        onClick={scrollToProducts}
+      >
+        Products and Services
+      </button>
+    </>
+  );
 
   return (
     <div className="container-fluid">
@@ -43,34 +78,31 @@ const Home = ({ navbarHeight }) => {
                 Welcome to AlgoTradeTech, We believe in Accuracy and Consistency
                 in every aspect of life and investments.
               </p>
-              <div className="d-flex justify-content-center">
-                <button
-                  type="button"
-                  className="btn btn-dark"
-                  onClick={scrollToProducts}
-                >
-                  Learn More
-                </button>
-
-                <button
-                  style={{ marginLeft: 20 }}
-                  type="button"
-                  className="btn btn-dark"
-                  onClick={scrollToProducts}
-                >
-                  Products and Services
-                </button>
+              <div
+                className={`d-flex justify-content-center ${
+                  isDesktop ? "flex-row" : "flex-column"
+                }`}
+              >
+                {isDesktop ? <DesktopButtons /> : <MobileButtons />}
               </div>
 
               {/* Updated additional content */}
-              <div className="d-flex justify-content-center mt-5">
+              <div
+                className={`d-flex justify-content-center ${
+                  isDesktop ? "flex-row mt-5" : "flex-column mt-4"
+                }`}
+              >
                 <h6 className="col-sm-3 d-flex align-items-center justify-content-center no-bottom-margin medium">
                   Our App is live now!
                 </h6>
-                <div className="col-sm-4 d-flex align-items-center justify-content-center">
+                <div
+                  className={`col-sm-4 d-flex align-items-center justify-content-center ${
+                    !isDesktop && "mt-3"
+                  }`}
+                >
                   Download the app to get started
                 </div>
-                <div className="col-sm-3">
+                <div className={`col-sm-3 ${!isDesktop && "mt-3"}`}>
                   <img
                     src={playstore}
                     alt="Your Alt Text"
