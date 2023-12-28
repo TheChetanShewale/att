@@ -3,15 +3,70 @@ import { Link } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 import "./styles.css";
 
-import people from "../../assets/people.png";
+import investor from "../../assets/investor.png";
+import algo from "../../assets/algo.png";
+import robot from "../../assets/robot.png";
 
 const Products = () => {
   const isDesktop = useMediaQuery({ minWidth: 768 }); // Set the breakpoint as needed
 
   const data = [
     {
-      icon: people,
-      title: "AutoTrader (Algo/Bot)",
+      icon: investor,
+      title: "Skilled Trader (Training)",
+      subtext: "Master the art of trading",
+      descTitle: "Covered Points",
+      desc: [
+        "Fundamental Analyis",
+        "Technical Analysis",
+        "Acquiring the right psychology for trading and investments",
+        "Capital Management",
+        "Trade Management",
+      ],
+      descTitle2: "Key Features",
+      desc2: [
+        "Mini and micro batches to focus on individual candidates",
+        "Entire training in your preferred language i.e., English, Hindi or Marathi",
+        "Focuses on basic to advanced concepts to make the candidate fully aware about the financial market ecosystem",
+        "Dedicated doubt solving sessions after every training session",
+        "Live trading sessions for better understanding",
+        "Mentoring community access for post training support and handholding",
+        "In person support via chats and emails post training",
+        "Affordable enrollment fees",
+        "Training Mode: Online",
+      ],
+    },
+    {
+      icon: algo,
+      title: "Algo Crafter (Training)",
+      subtext: "Learn to create your own trading algos",
+      descTitle: "Covered Points",
+      desc: [
+        "Basics of programming",
+        "Analysing the realtime data",
+        "Transforming the realtime data",
+        "Generating signals",
+        "Executing trades automatically",
+      ],
+      descTitle2: "Key Features",
+      desc2: [
+        "Focused on training candidates towards developing their own algos",
+        "Maximum practical focused",
+        "Code snippets and sources are provided after training completion for reference",
+        "Entire training in your preferred language i.e., English, Hindi or Marathi",
+        "Mini and micro batches",
+        "Dedicated doubt solving sessions after every training session",
+        "In person support via chats and emails post training",
+        "Affordable enrollment fees",
+        "Training Mode: Online",
+      ],
+    },
+    {
+      icon: robot,
+      badge: "Coming Soon",
+      title: "AutoTrader (Algo)",
+      subtext: "Our algo for YOUR benefit in markets",
+      descTitle: "Key Features",
       desc: [
         "Anyone with a basic computer handling knowledge can use it",
         "Execution without human intervention after running the program",
@@ -21,44 +76,20 @@ const Products = () => {
         "Affordable subscriptions",
       ],
     },
-    {
-      icon: people,
-      title: "Skilled Trader (Training)",
-      desc: [
-        "Mini and micro batches to focus on individual candidates",
-        "Entire training in your preferred language i.e., English, Hindi or Marathi",
-        "Focuses on basic to advanced concepts to make the candidate fully aware about the financial market ecosystem",
-        "Dedicated doubt solving sessions after every training session",
-        "Live trading sessions for better understanding",
-        "Mentoring community access for post training support and handholding",
-        "In person support via chats and emails post training",
-        "Affordable enrollment fees",
-      ],
-    },
-    {
-      icon: people,
-      title: "AlgoCraft Trader (Training)",
-      desc: [
-        "Focused on training candidates towards developing their own bot",
-        "Maximum practical focused",
-        "Code snippets and sources are provided after training completion for reference",
-        "Entire training in your preferred language i.e., English, Hindi or Marathi",
-        "Mini and micro batches",
-        "Dedicated doubt solving sessions after every training session",
-        "In person support via chats and emails post training",
-        "Affordable enrollment fees",
-      ],
-    },
   ];
 
   const returnCard = (item) => {
     return (
-      <div className="card-container d-flex flex-column">
+      <div className="card-container d-flex flex-column position-relative">
+        {item.badge && (
+          <div className="position-absolute top-0 end-0 m-2 badge">{item.badge}</div>
+        )}
         <div className="feature-icon-container">
           <img className="feature-icon" src={item.icon} alt={item.title} />
         </div>
         <h6 className="mt-2 medium">{item.title}</h6>
-        <div className="mt-4 key-features medium">Key Features:</div>
+        <div className="subtext">{item.subtext}</div>
+        <div className="mt-4 key-features medium">{item.descTitle}:</div>
         <ul className="desc">
           {item.desc.map((item, index) => (
             <li key={index} className="mb-3">
@@ -66,7 +97,19 @@ const Products = () => {
             </li>
           ))}
         </ul>
-        <div className="btn-container mt-auto">
+        {item.descTitle2 && (
+          <div>
+            <div className="key-features medium">{item.descTitle2}:</div>
+            <ul className="desc">
+              {item.desc2.map((item, index) => (
+                <li key={index} className="mb-3">
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+        <div className={`btn-container ${isDesktop && "mt-auto"}`}>
           <Link to="/" className="btn btn-dark">
             Check Details
           </Link>

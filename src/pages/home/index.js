@@ -135,6 +135,8 @@ const Home = ({ navbarHeight }) => {
             </p>
             <h4 className="medium">What we have for you?</h4>
             <Products />
+
+            <Divider classes={"mt-4 mb-4"} />
             {/*<h4 className="medium">What makes us unique?</h4>
             <Features />*/}
           </div>

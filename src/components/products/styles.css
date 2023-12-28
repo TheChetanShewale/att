@@ -30,8 +30,19 @@
   margin-bottom: 3px;
 }
 
+.badge {
+  color: black;
+  background-color: #83f28f;
+  font-size: 10px;
+}
+
+.subtext {
+  font-size: 12px;
+}
+
 .desc {
   font-size: 12px;
+  margin-top: 8px;
 }
 
 ul {
