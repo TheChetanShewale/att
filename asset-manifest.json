@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.5c5fed18.css",
-    "main.js": "/static/js/main.908dff16.js",
+    "main.js": "/static/js/main.6946d928.js",
     "static/js/787.c0fc9a39.chunk.js": "/static/js/787.c0fc9a39.chunk.js",
     "static/media/Montserrat-SemiBold.ttf": "/static/media/Montserrat-SemiBold.93b37a465fc4ec0d0415.ttf",
     "static/media/Montserrat-Medium.ttf": "/static/media/Montserrat-Medium.b8c6753baa964ccac1ba.ttf",
@@ -9,17 +9,17 @@
     "static/media/Montserrat-Regular.ttf": "/static/media/Montserrat-Regular.24785cc015b27a3e964b.ttf",
     "static/media/algo.png": "/static/media/algo.40d0e8103b10f6e57764.png",
     "static/media/investor.png": "/static/media/investor.4f029ca3a8609c6abbc4.png",
-    "static/media/telegram.svg": "/static/media/telegram.d6d12692f358315f375e8875c7bef0ae.svg",
     "index.html": "/index.html",
+    "static/media/telegram.svg": "/static/media/telegram.d6d12692f358315f375e8875c7bef0ae.svg",
     "static/media/instagram.svg": "/static/media/instagram.0c9ac902b9c808a8a9c35397b3057be9.svg",
     "static/media/x.svg": "/static/media/x.b3882bfc00769c5a5dd58de5c2f3b8ad.svg",
     "static/media/facebook.svg": "/static/media/facebook.83d5145ebf03c5b069a29018d49f59f1.svg",
     "main.5c5fed18.css.map": "/static/css/main.5c5fed18.css.map",
-    "main.908dff16.js.map": "/static/js/main.908dff16.js.map",
+    "main.6946d928.js.map": "/static/js/main.6946d928.js.map",
     "787.c0fc9a39.chunk.js.map": "/static/js/787.c0fc9a39.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5c5fed18.css",
-    "static/js/main.908dff16.js"
+    "static/js/main.6946d928.js"
   ]
 }
