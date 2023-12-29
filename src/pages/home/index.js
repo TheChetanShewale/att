@@ -27,7 +27,7 @@ const Home = ({ navbarHeight }) => {
   const DesktopButtons = () => (
     <>
       <button type="button" className="btn btn-dark" onClick={scrollToProducts}>
-        Learn More
+        Our Goals
       </button>
       <button
         type="button"
@@ -46,7 +46,7 @@ const Home = ({ navbarHeight }) => {
         className="btn btn-dark mobile-styles"
         onClick={scrollToProducts}
       >
-        Learn More
+        Our Goals
       </button>
       <button
         type="button"
@@ -130,7 +130,7 @@ const Home = ({ navbarHeight }) => {
             <h4 className="medium">Why Us?</h4>
             <p ref={productsHeaderRef} className="why-us-desc p-4">
               By spending years, we have bundled all the curated crux of trading
-              in our trainings and our product (AutoTrader), which will help you
+              in our trainings and services, which will help you
               to reach your destination of being a profitable trader faster!
             </p>
             <h4 className="medium">What we have for you?</h4>

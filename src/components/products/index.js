@@ -17,11 +17,14 @@ const Products = () => {
       subtext: "Master the art of trading",
       descTitle: "Covered Points",
       desc: [
+        "Myths and Reality of trading",
         "Fundamental Analyis",
         "Technical Analysis",
         "Acquiring the right psychology for trading and investments",
         "Capital Management",
         "Trade Management",
+        "Difference between different trading and investment types and which is best suitable for you",
+        "How to be safe from noise around you (general public opinions about the market)"
       ],
       descTitle2: "Key Features",
       desc2: [
@@ -37,11 +40,12 @@ const Products = () => {
       ],
     },
     {
-      icon: algo,
+      icon: robot,
       title: "Algo Crafter (Training)",
       subtext: "Learn to create your own trading algos",
       descTitle: "Covered Points",
       desc: [
+        "Basics of technical analyis required for the training",
         "Basics of programming",
         "Analysing the realtime data",
         "Transforming the realtime data",
@@ -62,7 +66,7 @@ const Products = () => {
       ],
     },
     {
-      icon: robot,
+      icon: algo,
       badge: "Coming Soon",
       title: "AutoTrader (Algo)",
       subtext: "Our algo for YOUR benefit in markets",
