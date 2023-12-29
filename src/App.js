@@ -1,10 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Outlet,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import "./App.css";
 
@@ -33,13 +28,9 @@ const App = () => {
       <div className="h-100" style={{ marginTop: `${navbarHeight}px` }}>
         <Navigation />
         <Routes>
-          <Route element={<Outlet />}>
-            <Route path="/" element={<Home navbarHeight={navbarHeight} />} />
-            <Route
-              path="/about-us"
-              element={<AboutUs/>}
-            />
-          </Route>
+          <Route path="/" element={<Home navbarHeight={navbarHeight} />} />
+          <Route path="/about-us" element={<AboutUs />} />
+          <Route path="*" element={<Home navbarHeight={navbarHeight} />} />
         </Routes>
       </div>
     </Router>
