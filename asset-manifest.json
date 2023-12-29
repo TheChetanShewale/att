@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.5c5fed18.css",
-    "main.js": "/static/js/main.9f0b6b7a.js",
-    "static/js/787.c0fc9a39.chunk.js": "/static/js/787.c0fc9a39.chunk.js",
-    "static/media/Montserrat-SemiBold.ttf": "/static/media/Montserrat-SemiBold.93b37a465fc4ec0d0415.ttf",
-    "static/media/Montserrat-Medium.ttf": "/static/media/Montserrat-Medium.b8c6753baa964ccac1ba.ttf",
-    "static/media/Montserrat-Light.ttf": "/static/media/Montserrat-Light.7179b7d2ac9b599db5f9.ttf",
-    "static/media/Montserrat-Regular.ttf": "/static/media/Montserrat-Regular.24785cc015b27a3e964b.ttf",
-    "static/media/algo.png": "/static/media/algo.40d0e8103b10f6e57764.png",
-    "static/media/investor.png": "/static/media/investor.4f029ca3a8609c6abbc4.png",
-    "static/media/telegram.svg": "/static/media/telegram.d6d12692f358315f375e8875c7bef0ae.svg",
-    "index.html": "/index.html",
-    "static/media/instagram.svg": "/static/media/instagram.0c9ac902b9c808a8a9c35397b3057be9.svg",
-    "static/media/x.svg": "/static/media/x.b3882bfc00769c5a5dd58de5c2f3b8ad.svg",
-    "static/media/facebook.svg": "/static/media/facebook.83d5145ebf03c5b069a29018d49f59f1.svg",
-    "main.5c5fed18.css.map": "/static/css/main.5c5fed18.css.map",
-    "main.9f0b6b7a.js.map": "/static/js/main.9f0b6b7a.js.map",
-    "787.c0fc9a39.chunk.js.map": "/static/js/787.c0fc9a39.chunk.js.map"
+    "main.css": "/index.html/static/css/main.32f5f356.css",
+    "main.js": "/index.html/static/js/main.c28ae7ae.js",
+    "static/js/787.c0fc9a39.chunk.js": "/index.html/static/js/787.c0fc9a39.chunk.js",
+    "static/media/Montserrat-SemiBold.ttf": "/index.html/static/media/Montserrat-SemiBold.93b37a465fc4ec0d0415.ttf",
+    "static/media/Montserrat-Medium.ttf": "/index.html/static/media/Montserrat-Medium.b8c6753baa964ccac1ba.ttf",
+    "static/media/Montserrat-Light.ttf": "/index.html/static/media/Montserrat-Light.7179b7d2ac9b599db5f9.ttf",
+    "static/media/Montserrat-Regular.ttf": "/index.html/static/media/Montserrat-Regular.24785cc015b27a3e964b.ttf",
+    "static/media/algo.png": "/index.html/static/media/algo.40d0e8103b10f6e57764.png",
+    "static/media/investor.png": "/index.html/static/media/investor.4f029ca3a8609c6abbc4.png",
+    "static/media/telegram.svg": "/index.html/static/media/telegram.d6d12692f358315f375e8875c7bef0ae.svg",
+    "index.html": "/index.html/index.html",
+    "static/media/instagram.svg": "/index.html/static/media/instagram.0c9ac902b9c808a8a9c35397b3057be9.svg",
+    "static/media/x.svg": "/index.html/static/media/x.b3882bfc00769c5a5dd58de5c2f3b8ad.svg",
+    "static/media/facebook.svg": "/index.html/static/media/facebook.83d5145ebf03c5b069a29018d49f59f1.svg",
+    "main.32f5f356.css.map": "/index.html/static/css/main.32f5f356.css.map",
+    "main.c28ae7ae.js.map": "/index.html/static/js/main.c28ae7ae.js.map",
+    "787.c0fc9a39.chunk.js.map": "/index.html/static/js/787.c0fc9a39.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5c5fed18.css",
-    "static/js/main.9f0b6b7a.js"
+    "static/css/main.32f5f356.css",
+    "static/js/main.c28ae7ae.js"
   ]
 }
