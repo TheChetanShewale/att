@@ -50,7 +50,7 @@ const Home = ({ navbarHeight }) => {
       <button
         type="button"
         className="btn btn-dark mobile-styles"
-        onClick={scrollToProducts}
+        onClick={navigateToGoals}
       >
         Our Mission
       </button>

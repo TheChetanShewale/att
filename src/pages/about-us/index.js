@@ -12,7 +12,7 @@ const AboutUs = () => {
   useEffect(() => {
     const el = document.getElementById(targetId);
     if (el) {
-      el.scrollIntoView();
+      el.scrollIntoView({behavior: "smooth", block: "center"});
     }
   }, [targetId]);
 
