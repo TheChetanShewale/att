@@ -12,7 +12,7 @@ const AboutUs = () => {
   useEffect(() => {
     const el = document.getElementById(targetId);
     if (el) {
-      el.scrollIntoView({behavior: "smooth", block: "center"});
+      el.scrollIntoView({ behavior: "smooth", block: "center" });
     }
   }, [targetId]);
 
@@ -26,7 +26,18 @@ const AboutUs = () => {
           {/* First Section */}
           <div className="d-flex flex-column mt-4">
             <h3 className="d-flex medium">About Us</h3>
-            <p className="mt-3">
+            <p className="mt-3 fw-bold">
+              Algo Trade Technologies is another name of passion that drives our
+              team into financial markets.
+            </p>
+            <p>
+              We formed AlgoTradeTech with an aim of -{" "}
+              <span className="text-decoration-underline">
+                Simplifying the learning of financial markets and eliminate the
+                struggling phase of every trader or investor.
+              </span>
+            </p>
+            <p>
               At some stage of life in pre-covid era, our financial markets
               journey also started at the same stage as many of us normally do
               without any proper guidance or knowledge.
@@ -34,6 +45,13 @@ const AboutUs = () => {
             <p>
               We spent a lot of sleepless days and nights finding our ways
               through the hurdles of markets to get ourselves profitable.
+            </p>
+            <p>
+              <span className="text-decoration-underline">
+                We thought of utilising this knowledge and bring it up to the
+                needy people
+              </span>{" "}
+              who really are excited to choose trading or investing as a career.
             </p>
             <p>
               Our focus is on{" "}
