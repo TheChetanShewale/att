@@ -1,11 +1,18 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Outlet,
+} from "react-router-dom";
 
 import "./App.css";
 
 import Navigation from "./components/navigation";
+import ScrollToTop from "./components/scroll";
 
 import Home from "./pages/home";
+import AboutUs from "./pages/about-us";
 import Contact from "./pages/contact-us";
 
 const App = () => {
@@ -22,11 +29,17 @@ const App = () => {
 
   return (
     <Router>
+      <ScrollToTop />
       <div className="h-100" style={{ marginTop: `${navbarHeight}px` }}>
         <Navigation />
         <Routes>
-          <Route path="/" element={<Home navbarHeight={navbarHeight} />} />
-          <Route path="/contact-us" element={<Contact />} />
+          <Route element={<Outlet />}>
+            <Route path="/" element={<Home navbarHeight={navbarHeight} />} />
+            <Route
+              path="/about-us"
+              element={<AboutUs/>}
+            />
+          </Route>
         </Routes>
       </div>
     </Router>

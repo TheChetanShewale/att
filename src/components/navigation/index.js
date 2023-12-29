@@ -32,23 +32,23 @@ const Navigation = () => {
             </Link>
 
             <Link
-              to="/contact-us"
+              to="/about-us"
               className={`btn ${
-                location.pathname === "/contact-us"
+                location.pathname === "/about-us"
                   ? "btn-dark"
                   : "btn-outline-dark"
               } link-left-margin`}
             >
-              Contact Us
+              About Us
             </Link>
           </div>
         ) : (
           <Navbar.Collapse id="navbarNav">
-            <Nav className="ml-auto">
+            <Nav className="ml-auto mt-3">
               <Link
                 to="/"
                 className={`btn ${
-                  location.pathname === "/contact-us"
+                  location.pathname === "/"
                     ? "btn-dark"
                     : "btn-outline-dark"
                 } link-top-margin}`}
@@ -56,14 +56,14 @@ const Navigation = () => {
                 Home
               </Link>
               <Link
-                to="/contact-us"
+                to="/about-us"
                 className={`btn ${
-                  location.pathname === "/contact-us"
+                  location.pathname === "/about-us"
                     ? "btn-dark"
                     : "btn-outline-dark"
                 } link-top-margin`}
               >
-                Contact Us
+                About Us
               </Link>
             </Nav>
           </Navbar.Collapse>

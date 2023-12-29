@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { useMediaQuery } from "react-responsive";
+import { useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles.css";
 
@@ -11,7 +12,12 @@ import Products from "../../components/products";
 
 const Home = ({ navbarHeight }) => {
   const isDesktop = useMediaQuery({ minWidth: 768 }); // Set the breakpoint as needed
+  const navigate = useNavigate();
   const productsHeaderRef = useRef();
+
+  const navigateToGoals = () => {
+    navigate("/about-us", { state: { targetId: "mission" } });
+  };
 
   const scrollToProducts = () => {
     const targetDiv = productsHeaderRef.current;
@@ -26,8 +32,8 @@ const Home = ({ navbarHeight }) => {
 
   const DesktopButtons = () => (
     <>
-      <button type="button" className="btn btn-dark" onClick={scrollToProducts}>
-        Our Goals
+      <button type="button" className="btn btn-dark" onClick={navigateToGoals}>
+        Our Mission
       </button>
       <button
         type="button"
@@ -46,7 +52,7 @@ const Home = ({ navbarHeight }) => {
         className="btn btn-dark mobile-styles"
         onClick={scrollToProducts}
       >
-        Our Goals
+        Our Mission
       </button>
       <button
         type="button"
@@ -62,14 +68,14 @@ const Home = ({ navbarHeight }) => {
     <div className="container-fluid">
       <div className="row">
         {/* Left Column */}
-        <div className="col-sm-1 d-none d-sm-block p-3" />
+        <div className="col-sm-1 d-none d-sm-block" />
         {/* Center Column */}
         <div
           className="col-sm-10 d-flex align-items-center justify-content-center"
           style={{ marginTop: `${navbarHeight - 20}px` }}
         >
           {/* First Section */}
-          <div className="text-center">
+          <div className="d-flex flex-column text-center">
             <div className="mesh grad">
               <h2 className="medium">
                 Take the first step towards your profitable journey today!
@@ -130,8 +136,8 @@ const Home = ({ navbarHeight }) => {
             <h4 className="medium">Why Us?</h4>
             <p ref={productsHeaderRef} className="why-us-desc p-4">
               By spending years, we have bundled all the curated crux of trading
-              in our trainings and services, which will help you
-              to reach your destination of being a profitable trader faster!
+              in our trainings and services, which will help you to reach your
+              destination of being a profitable trader faster!
             </p>
             <h4 className="medium">What we have for you?</h4>
             <Products />
@@ -142,7 +148,7 @@ const Home = ({ navbarHeight }) => {
           </div>
         </div>
         {/* Right Column */}
-        <div className="col-sm-1 d-none d-sm-block p-3" />
+        <div className="col-sm-1 d-none d-sm-block" />
       </div>
     </div>
   );

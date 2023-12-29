@@ -1,0 +1,12 @@
+p {
+  font-size: 14px;
+  font-family: "medium";
+  color: #4b4b4b;
+}
+
+.goals-list > li {
+  font-size: 14px;
+  font-family: "medium";
+  color: #4b4b4b;
+  padding: 5px;
+}
