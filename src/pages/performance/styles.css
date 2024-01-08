@@ -1,0 +1,48 @@
+p {
+  font-size: 14px;
+  font-family: "medium";
+  color: #4b4b4b;
+}
+
+.goals-list > li {
+  font-size: 14px;
+  font-family: "medium";
+  color: #4b4b4b;
+  padding: 5px;
+}
+
+table {
+  font-size: 13px;
+}
+
+th {
+  font-size: 12px;
+}
+
+.active {
+  color: black;
+  background-color: #83f28f;
+  border-radius: 5px;
+}
+
+.closed {
+  color: white;
+  background-color: #4b4b4b;
+  border-radius: 5px;
+}
+
+.enable-scroll {
+  overflow-x: auto;
+}
+
+.profit {
+  color: black;
+  background-color: #83f28f;
+  border-radius: 5px;
+}
+
+.loss {
+  color: white;
+  background-color: #ff5252;
+  border-radius: 5px;
+}

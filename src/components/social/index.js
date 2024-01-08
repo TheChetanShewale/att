@@ -8,17 +8,30 @@ import x from "../../assets/x.svg";
 
 const Social = () => {
   const socialMediaData = [
-    { link: "#", name: "Facebook", icon: facebook },
-    { link: "#", name: "Instagram", icon: instagram },
-    { link: "#", name: "Telegram", icon: telegram },
-    { link: "#", name: "X (Twitter)", icon: x },
+    {
+      link: "https://www.facebook.com/AlgoTradeTech",
+      name: "Facebook",
+      icon: facebook,
+    },
+    {
+      link: "https://www.instagram.com/AlgoTradeTech/",
+      name: "Instagram",
+      icon: instagram,
+    },
+    { link: "https://t.me/AlgoTradeTech", name: "Telegram", icon: telegram },
+    { link: "https://twitter.com/AlgoTradeTech", name: "X (Twitter)", icon: x },
   ];
 
   return (
     <div className="d-flex mt-1">
       {socialMediaData.map((socialMedia, index) => (
         <div style={{ marginLeft: index > 0 ? 15 : 0 }}>
-          <a key={index} href={socialMedia.link} className="pe-auto link-dark">
+          <a
+            key={index}
+            href={socialMedia.link}
+            className="pe-auto link-dark"
+            target="_blank"
+          >
             <img
               className="icon"
               src={socialMedia.icon}

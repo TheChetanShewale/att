@@ -30,7 +30,16 @@ const Navigation = () => {
             >
               Home
             </Link>
-
+            <Link
+              to="/performance"
+              className={`btn ${
+                location.pathname === "/performance"
+                  ? "btn-dark"
+                  : "btn-outline-dark"
+              } link-left-margin`}
+            >
+              Performance
+            </Link>
             <Link
               to="/about-us"
               className={`btn ${
@@ -54,6 +63,16 @@ const Navigation = () => {
                 } link-top-margin}`}
               >
                 Home
+              </Link>
+              <Link
+                to="/performance"
+                className={`btn ${
+                  location.pathname === "/performance"
+                    ? "btn-dark"
+                    : "btn-outline-dark"
+                } link-top-margin`}
+              >
+                Performance
               </Link>
               <Link
                 to="/about-us"
