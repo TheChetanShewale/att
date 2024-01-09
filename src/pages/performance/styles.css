@@ -46,3 +46,9 @@ th {
   background-color: #ff5252;
   border-radius: 5px;
 }
+
+.closing-desc {
+  font-size: 12px;
+  font-family: "medium";
+  color: #4b4b4b;
+}

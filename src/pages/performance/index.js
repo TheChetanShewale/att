@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles.css";
 
 const Performance = () => {
+  const [updatedDate, setUpdatedDate] = useState("08 Jan 2024");
   const [data, setData] = useState([
     {
       symbol: "RVNL.NS",
@@ -14,7 +15,7 @@ const Performance = () => {
       status: "closed",
       exitPrice: 135,
       exitDate: "May 2023",
-      currentPrice: null,
+      currentPrice: 182.1,
       roi: null,
     },
     {
@@ -26,7 +27,7 @@ const Performance = () => {
       status: "active",
       exitPrice: null,
       exitDate: null,
-      currentPrice: null,
+      currentPrice: 541.7,
       roi: null,
     },
     {
@@ -38,7 +39,7 @@ const Performance = () => {
       status: "active",
       exitPrice: null,
       exitDate: null,
-      currentPrice: null,
+      currentPrice: 24.05,
       roi: null,
     },
     {
@@ -50,7 +51,7 @@ const Performance = () => {
       status: "active",
       exitPrice: null,
       exitDate: null,
-      currentPrice: null,
+      currentPrice: 42.15,
       roi: null,
     },
     {
@@ -61,7 +62,21 @@ const Performance = () => {
       status: "active",
       exitPrice: null,
       exitDate: null,
-      currentPrice: null,
+      currentPrice: 439.05,
+      roi: null,
+    },
+  ]);
+
+  const [indexData, setIndexData] = useState([
+    {
+      scrip: "Nifty 50",
+      entryPrice: 20200,
+      //entryDate: "20 Apr 2023",
+      entryDate: "December 2023 (First Week)",
+      status: "closed",
+      exitPrice: 21500,
+      exitDate: "January 2024 (First Week)",
+      currentPrice: 21513,
       roi: null,
     },
   ]);
@@ -93,23 +108,38 @@ const Performance = () => {
   };
 
   useEffect(() => {
-    const epoch = Math.floor(Date.now() / 1000);
-    const updateCurrentPrices = async () => {
+    //const epoch = Math.floor(Date.now() / 1000);
+    const updateCurrentStockPrices = async () => {
       const updatedData = await Promise.all(
         data.map(async (entry) => {
-          const currentPrice = await fetchData(entry, epoch);
+          //const currentPrice = await fetchData(entry, epoch);
           const roi = calculateROI(
             entry.entryPrice,
-            entry.exitPrice ? entry.exitPrice : currentPrice
+            entry.exitPrice ? entry.exitPrice : entry.currentPrice
           );
-          return { ...entry, currentPrice, roi };
+          return { ...entry, roi };
         })
       );
       setData(updatedData);
     };
 
+    const updateCurrentIndexPrices = async () => {
+      const updatedData = await Promise.all(
+        indexData.map(async (entry) => {
+          //const currentPrice = await fetchData(entry, epoch);
+          const roi = calculateROI(
+            entry.entryPrice,
+            entry.exitPrice ? entry.exitPrice : entry.currentPrice
+          );
+          return { ...entry, roi };
+        })
+      );
+      setIndexData(updatedData);
+    };
+
     // Call the function to update current prices
-    updateCurrentPrices();
+    updateCurrentStockPrices();
+    updateCurrentIndexPrices();
   }, []);
 
   return (
@@ -121,7 +151,10 @@ const Performance = () => {
         <div className="col-sm-10">
           {/* First Section */}
           <div className="mt-4 enable-scroll">
-            <h3 className="medium">PT</h3>
+            <h4 className="medium">
+              Recent Positional/Long Term Trades (Stocks)
+            </h4>
+            <div className="closing-desc mb-2">{`Closing price updated on: ${updatedDate}, Current price may be different as we update the closing price during maintainance on monthly basis.`}</div>
             <table className="table table-bordered text-center">
               <thead>
                 <tr>
@@ -130,7 +163,7 @@ const Performance = () => {
                   <th scope="col">Entry Date</th>
                   <th scope="col">Status</th>
                   <th scope="col">Entry Price</th>
-                  <th scope="col">Current Price</th>
+                  <th scope="col">Closing Price</th>
                   <th scope="col">RoI</th>
                   <th scope="col">Exit Price</th>
                   <th scope="col">Exit Date</th>
@@ -153,7 +186,7 @@ const Performance = () => {
                     </td>
                     <td>
                       <div className={entry.roi > 0 ? "profit" : "loss"}>
-                      {entry.roi === null ? "Loading..." : `${entry.roi} %`}
+                        {entry.roi === null ? "Loading..." : `${entry.roi} %`}
                       </div>
                     </td>
                     <td>{entry.status === "active" ? "-" : entry.exitPrice}</td>
@@ -163,6 +196,66 @@ const Performance = () => {
               </tbody>
             </table>
           </div>
+
+          <div className="mt-2 enable-scroll">
+            <h4 className="medium">
+              Recent Positional Trades (Indices - Spot)
+            </h4>
+            <div className="closing-desc mb-2">{`Closing price updated on: ${updatedDate}, Current price may be different as we update the closing price during maintainance on monthly basis.`}</div>
+            <table className="table table-bordered text-center">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Index</th>
+                  <th scope="col">Entry Date</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Entry Price</th>
+                  <th scope="col">Closing Price</th>
+                  <th scope="col">RoI</th>
+                  <th scope="col">Exit Price</th>
+                  <th scope="col">Exit Date</th>
+                </tr>
+              </thead>
+              <tbody>
+                {indexData.map((entry, index) => (
+                  <tr key={index}>
+                    <th scope="row">{index + 1}</th>
+                    <td>{entry.scrip}</td>
+                    <td>{entry.entryDate}</td>
+                    <td>
+                      <div className={entry.status}>{entry.status}</div>
+                    </td>
+                    <td>Around {entry.entryPrice}</td>
+                    <td>
+                      {entry.currentPrice === null
+                        ? "Loading..."
+                        : entry.currentPrice}
+                    </td>
+                    <td>
+                      <div className={entry.roi > 0 ? "profit" : "loss"}>
+                        {entry.roi === null ? "Loading..." : `${entry.roi} %`}
+                      </div>
+                    </td>
+                    <td>
+                      {entry.status === "active"
+                        ? "-"
+                        : `Around ${entry.exitPrice}`}
+                    </td>
+                    <td>{entry.status === "active" ? "-" : entry.exitDate}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="closing-desc">
+            Note: Investments in the markets are subject to risks, Past
+            performance is not a gurantee of the future performance.{" "}
+            <span className="text-decoration-underline">
+              The ideas here are to showcase our analysis quality and
+              transparency.
+            </span>
+            <span className="fw-bold"> This not an investment advice.</span>
+          </p>
         </div>
         {/* Right Column */}
         <div className="col-sm-1 d-none d-sm-block" />
