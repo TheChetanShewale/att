@@ -28,6 +28,7 @@ const Products = () => {
       ],
       descTitle2: "Key Features",
       desc2: [
+        "Candidate gets trained for Day trading, Short term investing and Long term investing in this course",
         "Mini and micro batches to focus on individual candidates",
         "Entire training in your preferred language i.e., English, Hindi or Marathi",
         "Focuses on basic to advanced concepts to make the candidate fully aware about the financial market ecosystem",
@@ -45,9 +46,10 @@ const Products = () => {
       subtext: "Learn to create your own trading algos",
       descTitle: "Covered Points",
       desc: [
-        "Basics of technical analyis required for the training",
-        "Basics of programming",
-        "Analysing the realtime data",
+        "Basics of technical analyis",
+        "Basics of programming required for developing an algo",
+        "Knowledge transfer on how to code the technical analysis conditions in algo",
+        "Fetching and Analysing the realtime data",
         "Transforming the realtime data",
         "Generating signals",
         "Executing trades automatically",
