@@ -154,7 +154,7 @@ const Performance = () => {
             <h4 className="medium">
               Recent Positional/Long Term Trades (Stocks)
             </h4>
-            <div className="closing-desc mb-2">{`Closing price updated on: ${updatedDate}, Current price may be different as we update the closing price during maintainance on monthly basis.`}</div>
+            <div className="closing-desc mb-2">{`Closing price updated on: ${updatedDate}, Current price may be different as we update the closing price during periodic maintainance.`}</div>
             <table className="table table-bordered text-center">
               <thead>
                 <tr>
@@ -201,7 +201,7 @@ const Performance = () => {
             <h4 className="medium">
               Recent Positional Trades (Indices - Spot)
             </h4>
-            <div className="closing-desc mb-2">{`Closing price updated on: ${updatedDate}, Current price may be different as we update the closing price during maintainance on monthly basis.`}</div>
+            <div className="closing-desc mb-2">{`Closing price updated on: ${updatedDate}, Current price may be different as we update the closing price during periodic maintainance.`}</div>
             <table className="table table-bordered text-center">
               <thead>
                 <tr>
