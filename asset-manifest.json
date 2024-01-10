@@ -1,12 +1,13 @@
 {
   "files": {
     "main.css": "/static/css/main.1f7c227f.css",
-    "main.js": "/static/js/main.c40d831f.js",
+    "main.js": "/static/js/main.66917399.js",
     "static/js/787.c0fc9a39.chunk.js": "/static/js/787.c0fc9a39.chunk.js",
     "static/media/Montserrat-SemiBold.ttf": "/static/media/Montserrat-SemiBold.93b37a465fc4ec0d0415.ttf",
     "static/media/Montserrat-Medium.ttf": "/static/media/Montserrat-Medium.b8c6753baa964ccac1ba.ttf",
     "static/media/Montserrat-Light.ttf": "/static/media/Montserrat-Light.7179b7d2ac9b599db5f9.ttf",
     "static/media/Montserrat-Regular.ttf": "/static/media/Montserrat-Regular.24785cc015b27a3e964b.ttf",
+    "static/media/logo.png": "/static/media/logo.1ea49baa2ff463df91a4.png",
     "static/media/algo.png": "/static/media/algo.40d0e8103b10f6e57764.png",
     "static/media/investor.png": "/static/media/investor.4f029ca3a8609c6abbc4.png",
     "index.html": "/index.html",
@@ -15,11 +16,11 @@
     "static/media/x.svg": "/static/media/x.b3882bfc00769c5a5dd58de5c2f3b8ad.svg",
     "static/media/facebook.svg": "/static/media/facebook.83d5145ebf03c5b069a29018d49f59f1.svg",
     "main.1f7c227f.css.map": "/static/css/main.1f7c227f.css.map",
-    "main.c40d831f.js.map": "/static/js/main.c40d831f.js.map",
+    "main.66917399.js.map": "/static/js/main.66917399.js.map",
     "787.c0fc9a39.chunk.js.map": "/static/js/787.c0fc9a39.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1f7c227f.css",
-    "static/js/main.c40d831f.js"
+    "static/js/main.66917399.js"
   ]
 }
