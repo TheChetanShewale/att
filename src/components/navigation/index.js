@@ -4,6 +4,8 @@ import { Navbar, Nav } from "react-bootstrap";
 import { useMediaQuery } from "react-responsive";
 import "./styles.css";
 
+import logo from "../../assets/logo.png";
+
 const Navigation = () => {
   const location = useLocation();
   const isDesktop = useMediaQuery({ minWidth: 768 }); // Set the breakpoint as needed
@@ -13,7 +15,11 @@ const Navigation = () => {
       <div className="container">
         {/* Logo on the left */}
         <Link className="navbar-brand" to="/">
-          Your Logo
+          <img
+            src={logo}
+            alt="Logo"
+            style={{ width: "270px", height: "80px", marginTop: '-15px', marginBottom: '-15px' }}
+          />
         </Link>
 
         {/* Hamburger menu for small screens */}
@@ -57,9 +63,7 @@ const Navigation = () => {
               <Link
                 to="/"
                 className={`btn ${
-                  location.pathname === "/"
-                    ? "btn-dark"
-                    : "btn-outline-dark"
+                  location.pathname === "/" ? "btn-dark" : "btn-outline-dark"
                 } link-top-margin}`}
               >
                 Home

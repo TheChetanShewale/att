@@ -72,7 +72,7 @@ const Home = ({ navbarHeight }) => {
         {/* Center Column */}
         <div
           className="col-sm-10 d-flex align-items-center justify-content-center"
-          style={{ marginTop: `${navbarHeight - 20}px` }}
+          style={{ marginTop: `${navbarHeight - 45}px` }}
         >
           {/* First Section */}
           <div className="d-flex flex-column text-center">
