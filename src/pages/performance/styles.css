@@ -23,12 +23,14 @@ th {
   color: black;
   background-color: #83f28f;
   border-radius: 5px;
+  padding: 0px 5px;
 }
 
 .closed {
   color: white;
   background-color: #4b4b4b;
   border-radius: 5px;
+  padding: 0px 5px;
 }
 
 .enable-scroll {
@@ -39,12 +41,14 @@ th {
   color: black;
   background-color: #83f28f;
   border-radius: 5px;
+  padding: 0px 5px;
 }
 
 .loss {
   color: white;
   background-color: #ff5252;
   border-radius: 5px;
+  padding: 0px 5px;
 }
 
 .closing-desc {

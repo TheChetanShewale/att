@@ -3,6 +3,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import "./styles.css";
 
+import Divider from "../../components/divider";
+
 const Performance = () => {
   const [updatedDate, setUpdatedDate] = useState("08 Jan 2024");
   const [data, setData] = useState([
@@ -248,14 +250,15 @@ const Performance = () => {
             </table>
           </div>
           <p className="closing-desc">
-            Note: Investments in the markets are subject to risks, Past
-            performance is not a gurantee of the future performance.{" "}
+            <span className="fw-bold">Note:</span> Past performance is not a
+            gurantee of the future performance.{" "}
             <span className="text-decoration-underline">
               The ideas here are to showcase our analysis quality and
               transparency.
             </span>
             <span className="fw-bold"> This not an investment advice.</span>
           </p>
+          <Divider classes={"mt-4 mb-4"} />
         </div>
         {/* Right Column */}
         <div className="col-sm-1 d-none d-sm-block" />

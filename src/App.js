@@ -9,6 +9,7 @@ import ScrollToTop from "./components/scroll";
 import Home from "./pages/home";
 import AboutUs from "./pages/about-us";
 import Performance from "./pages/performance";
+import Footer from "./components/footer";
 
 const App = () => {
   const [navbarHeight, setNavbarHeight] = useState(0);
@@ -33,6 +34,7 @@ const App = () => {
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="*" element={<Home navbarHeight={navbarHeight} />} />
         </Routes>
+        <Footer />
       </div>
     </Router>
   );

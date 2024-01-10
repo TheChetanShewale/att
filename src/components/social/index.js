@@ -6,7 +6,7 @@ import instagram from "../../assets/instagram.svg";
 import telegram from "../../assets/telegram.svg";
 import x from "../../assets/x.svg";
 
-const Social = () => {
+const Social = ({ isFooter }) => {
   const socialMediaData = [
     {
       link: "https://www.facebook.com/AlgoTradeTech",
@@ -23,7 +23,7 @@ const Social = () => {
   ];
 
   return (
-    <div className="d-flex mt-1">
+    <div className={`d-flex ${isFooter ? "mt-3" : "mt-1"}`}>
       {socialMediaData.map((socialMedia, index) => (
         <div style={{ marginLeft: index > 0 ? 15 : 0 }}>
           <a
@@ -37,7 +37,7 @@ const Social = () => {
               src={socialMedia.icon}
               alt={socialMedia.name}
             />
-            <p className="mt-1 name">{socialMedia.name}</p>
+            {!isFooter && <p className="mt-1 name">{socialMedia.name}</p>}
           </a>
         </div>
       ))}

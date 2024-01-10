@@ -4,3 +4,9 @@
   width: 95%;
   background-color: silver;
 }
+
+.separator-vertical {
+  height: 95%;
+  width: 0.5px;
+  background-color: silver;
+}
