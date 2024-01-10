@@ -11,7 +11,7 @@ const Navigation = () => {
   const isDesktop = useMediaQuery({ minWidth: 768 }); // Set the breakpoint as needed
 
   return (
-    <Navbar expand="lg" className="custom-navbar fixed-top">
+    <Navbar expand="lg" className="custom-navbar" /*fixed-top*/>
       <div className="container">
         {/* Logo on the left */}
         <Link className="navbar-brand" to="/">

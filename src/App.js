@@ -25,7 +25,7 @@ const App = () => {
   return (
     <Router>
       <ScrollToTop />
-      <div className="h-100" style={{ marginTop: `${navbarHeight}px` }}>
+      <div className="h-100" /*style={{ marginTop: `${navbarHeight}px` }}*/>
         <Navigation />
         <Routes>
           <Route path="/" element={<Home navbarHeight={navbarHeight} />} />
