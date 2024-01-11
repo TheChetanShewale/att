@@ -6,7 +6,9 @@ import "./styles.css";
 
 import Social from "../../components/social";
 
-import playstore from "../../assets/playstore.png";
+import call from "../../assets/call.png";
+import whatsapp from "../../assets/whatsapp.png";
+
 import Divider from "../../components/divider";
 import Products from "../../components/products";
 
@@ -93,12 +95,28 @@ const Home = ({ navbarHeight }) => {
               </div>
 
               {/* Updated additional content */}
-              <div
-                className={`d-flex justify-content-center ${
-                  isDesktop ? "flex-row mt-5" : "flex-column mt-4"
-                }`}
-              >
-                <h6 className="col-sm-3 d-flex align-items-center justify-content-center no-bottom-margin medium">
+              <div className={`${isDesktop ? "mt-5" : "mt-4"}`}>
+                <div>Contact us for enrollment or queries</div>
+                <div className="mt-3 d-flex justify-content-center align-items-center">
+                  <img
+                    className="banner-icon banner-icon-border"
+                    src={call}
+                    alt="call"
+                  />
+                  <div className="or">OR</div>
+                  <img className="banner-icon" src={whatsapp} alt="call" />
+                  <div className="or">ON</div>
+                  <span className="text-decoration-underline medium banner-icon-text">
+                    +91 9284298715
+                  </span>
+                </div>
+                <div className="mt-3">
+                  Email:{" "}
+                  <span className="text-decoration-underline medium">
+                    support@algotradetech.com
+                  </span>
+                </div>
+                {/*<h6 className="col-sm-3 d-flex align-items-center justify-content-center no-bottom-margin medium">
                   Our App is live now!
                 </h6>
                 <div
@@ -114,11 +132,11 @@ const Home = ({ navbarHeight }) => {
                     alt="Your Alt Text"
                     style={{ width: "70%", height: "auto", maxWidth: "200px" }}
                   />
-                </div>
+                </div>*/}
               </div>
 
               {/* Social media buttons */}
-              <div className="col-sm-12 mt-5 d-flex align-items-center justify-content-center no-bottom-margin">
+              <div className="col-sm-12 mt-4 d-flex align-items-center justify-content-center no-bottom-margin">
                 Follow ATT on social media
               </div>
 

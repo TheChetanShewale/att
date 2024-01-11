@@ -21,18 +21,38 @@
 .mesh {
   padding-top: 30px;
   border-radius: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .grad {
-  background-color:#ffa399;
-  background-image:
-  radial-gradient(at 30% 17%, hsla(231,91%,69%,1) 0px, transparent 50%),
-  radial-gradient(at 85% 47%, hsla(215,62%,74%,1) 0px, transparent 50%),
-  radial-gradient(at 7% 98%, hsla(359,67%,60%,1) 0px, transparent 50%),
-  radial-gradient(at 17% 12%, hsla(329,96%,64%,1) 0px, transparent 50%),
-  radial-gradient(at 35% 74%, hsla(66,76%,75%,1) 0px, transparent 50%),
-  radial-gradient(at 8% 69%, hsla(37,80%,65%,1) 0px, transparent 50%),
-  radial-gradient(at 55% 43%, hsla(292,65%,74%,1) 0px, transparent 50%);
+  background-color: #ffa399;
+  background-image: radial-gradient(
+      at 30% 17%,
+      hsla(231, 91%, 69%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 85% 47%, hsla(215, 62%, 74%, 1) 0px, transparent 50%),
+    radial-gradient(at 7% 98%, hsla(359, 67%, 60%, 1) 0px, transparent 50%),
+    radial-gradient(at 17% 12%, hsla(329, 96%, 64%, 1) 0px, transparent 50%),
+    radial-gradient(at 35% 74%, hsla(66, 76%, 75%, 1) 0px, transparent 50%),
+    radial-gradient(at 8% 69%, hsla(37, 80%, 65%, 1) 0px, transparent 50%),
+    radial-gradient(at 55% 43%, hsla(292, 65%, 74%, 1) 0px, transparent 50%);
+}
+
+.banner-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.banner-icon-border {
+  border: 3px solid #edeff1;
+  border-radius: 15px;
+}
+
+.or {
+  font-size: 12px;
+  margin: 0px 10px;
 }
 
 /*.grad {

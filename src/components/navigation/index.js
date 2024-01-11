@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Navbar, Nav } from "react-bootstrap";
 import { useMediaQuery } from "react-responsive";
@@ -7,8 +7,13 @@ import "./styles.css";
 import logo from "../../assets/logo.png";
 
 const Navigation = () => {
+  const collapseRef = useRef(null);
   const location = useLocation();
   const isDesktop = useMediaQuery({ minWidth: 768 }); // Set the breakpoint as needed
+
+  const collapseNavigation = () => {
+    collapseRef.current.click();
+  };
 
   return (
     <Navbar expand="lg" className="custom-navbar" /*fixed-top*/>
@@ -18,12 +23,19 @@ const Navigation = () => {
           <img
             src={logo}
             alt="Logo"
-            style={{ width: "270px", height: "80px", marginTop: '-15px', marginBottom: '-15px' }}
+            style={{
+              width: "270px",
+              height: "80px",
+              marginTop: "-15px",
+              marginBottom: "-15px",
+            }}
           />
         </Link>
 
         {/* Hamburger menu for small screens */}
-        {!isDesktop && <Navbar.Toggle aria-controls="navbarNav" />}
+        {!isDesktop && (
+          <Navbar.Toggle ref={collapseRef} aria-controls="navbarNav" />
+        )}
 
         {/* Navbar links */}
         {isDesktop ? (
@@ -61,6 +73,7 @@ const Navigation = () => {
           <Navbar.Collapse id="navbarNav">
             <Nav className="ml-auto mt-3">
               <Link
+                onClick={collapseNavigation}
                 to="/"
                 className={`btn ${
                   location.pathname === "/" ? "btn-dark" : "btn-outline-dark"
@@ -69,6 +82,7 @@ const Navigation = () => {
                 Home
               </Link>
               <Link
+                onClick={collapseNavigation}
                 to="/performance"
                 className={`btn ${
                   location.pathname === "/performance"
@@ -79,6 +93,7 @@ const Navigation = () => {
                 Performance
               </Link>
               <Link
+                onClick={collapseNavigation}
                 to="/about-us"
                 className={`btn ${
                   location.pathname === "/about-us"
