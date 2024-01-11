@@ -33,7 +33,7 @@ const Footer = () => {
               }}
             />
             <div className="medium address">
-              Singhad Road, Nanded City, Nanded, Pune - 411 041
+              Sinhgad Road, Nanded City, Nanded, Pune - 411 041
             </div>
           </div>
           <Divider isVertical={true} classes="divider" />
