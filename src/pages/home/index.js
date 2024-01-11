@@ -106,15 +106,21 @@ const Home = ({ navbarHeight }) => {
                   <div className="or">OR</div>
                   <img className="banner-icon" src={whatsapp} alt="call" />
                   <div className="or">ON</div>
-                  <span className="text-decoration-underline medium banner-icon-text">
+                  <a
+                    className="text-decoration-underline medium"
+                    href="tel:+919284298715"
+                  >
                     +91 9284298715
-                  </span>
+                  </a>
                 </div>
                 <div className="mt-3">
                   Email:{" "}
-                  <span className="text-decoration-underline medium">
+                  <a
+                    className="text-decoration-underline medium"
+                    href="mailto:support@algotradetech.com"
+                  >
                     support@algotradetech.com
-                  </span>
+                  </a>
                 </div>
                 {/*<h6 className="col-sm-3 d-flex align-items-center justify-content-center no-bottom-margin medium">
                   Our App is live now!
@@ -136,7 +142,7 @@ const Home = ({ navbarHeight }) => {
               </div>
 
               {/* Social media buttons */}
-              <div className="col-sm-12 mt-4 d-flex align-items-center justify-content-center no-bottom-margin">
+              <div className="col-sm-12 follow-heading d-flex align-items-center justify-content-center no-bottom-margin">
                 Follow ATT on social media
               </div>
 
