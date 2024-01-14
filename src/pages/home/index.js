@@ -6,9 +6,6 @@ import "./styles.css";
 
 import Social from "../../components/social";
 
-import call from "../../assets/call.png";
-import whatsapp from "../../assets/whatsapp.png";
-
 import Divider from "../../components/divider";
 import Products from "../../components/products";
 
@@ -32,6 +29,10 @@ const Home = ({ navbarHeight }) => {
     });
   };
 
+  const openForm = () => {
+    window.open("https://forms.gle/7XZy6zSFsagdusXy8", "_blank");
+  };
+
   const DesktopButtons = () => (
     <>
       <button type="button" className="btn btn-dark" onClick={navigateToGoals}>
@@ -40,9 +41,9 @@ const Home = ({ navbarHeight }) => {
       <button
         type="button"
         className="btn btn-dark desktop-styles"
-        onClick={scrollToProducts}
+        onClick={openForm}
       >
-        Products and Services
+        Request a callback
       </button>
     </>
   );
@@ -59,9 +60,9 @@ const Home = ({ navbarHeight }) => {
       <button
         type="button"
         className="btn btn-dark mobile-styles"
-        onClick={scrollToProducts}
+        onClick={openForm}
       >
-        Products and Services
+        Request a callback
       </button>
     </>
   );
@@ -82,7 +83,7 @@ const Home = ({ navbarHeight }) => {
               <h2 className="medium">
                 Take the first step towards your profitable journey today!
               </h2>
-              <p className="mt-3">
+              <p className="sub-heading mt-3">
                 Welcome to AlgoTradeTech, We believe in Accuracy and Consistency
                 in every aspect of life and investments.
               </p>
@@ -98,17 +99,14 @@ const Home = ({ navbarHeight }) => {
               <div className={`${isDesktop ? "mt-5" : "mt-4"}`}>
                 <div>Contact us for enrollment or queries</div>
                 <div className="mt-3 d-flex justify-content-center align-items-center">
-                  <img
-                    className="banner-icon banner-icon-border"
-                    src={call}
-                    alt="call"
-                  />
-                  <div className="or">OR</div>
-                  <img className="banner-icon" src={whatsapp} alt="call" />
-                  <div className="or">ON</div>
+                  <div>Call</div>
+                  <div className="or">or</div>
+                  <div>WhatsApp</div>
+                  <div className="or">@</div>
                   <a
                     className="text-decoration-underline medium"
                     href="tel:+919284298715"
+                    target="_blank"
                   >
                     +91 9284298715
                   </a>
@@ -118,6 +116,7 @@ const Home = ({ navbarHeight }) => {
                   <a
                     className="text-decoration-underline medium"
                     href="mailto:support@algotradetech.com"
+                    target="_blank"
                   >
                     support@algotradetech.com
                   </a>

@@ -6,7 +6,7 @@ import "./styles.css";
 import Divider from "../../components/divider";
 
 const Performance = () => {
-  const [updatedDate, setUpdatedDate] = useState("08 Jan 2024");
+  const [updatedDate, setUpdatedDate] = useState("12th Jan 2024");
   const [data, setData] = useState([
     {
       symbol: "RVNL.NS",
@@ -17,7 +17,7 @@ const Performance = () => {
       status: "closed",
       exitPrice: 135,
       exitDate: "May 2023",
-      currentPrice: 182.1,
+      currentPrice: 203.25,
       roi: null,
     },
     {
@@ -29,7 +29,7 @@ const Performance = () => {
       status: "active",
       exitPrice: null,
       exitDate: null,
-      currentPrice: 541.7,
+      currentPrice: 541.15,
       roi: null,
     },
     {
@@ -41,7 +41,7 @@ const Performance = () => {
       status: "active",
       exitPrice: null,
       exitDate: null,
-      currentPrice: 24.05,
+      currentPrice: 23.80,
       roi: null,
     },
     {
@@ -53,7 +53,7 @@ const Performance = () => {
       status: "active",
       exitPrice: null,
       exitDate: null,
-      currentPrice: 42.15,
+      currentPrice: 46.05,
       roi: null,
     },
     {
@@ -64,7 +64,7 @@ const Performance = () => {
       status: "active",
       exitPrice: null,
       exitDate: null,
-      currentPrice: 439.05,
+      currentPrice: 456.25,
       roi: null,
     },
   ]);
@@ -201,7 +201,7 @@ const Performance = () => {
 
           <div className="mt-2 enable-scroll">
             <h4 className="medium">
-              Recent Positional Trades (Indices - Spot)
+              Recent Positional Trades (Indices - Spot Price)
             </h4>
             <div className="closing-desc mb-2">{`Closing price updated on: ${updatedDate}, Current price may be different as we update the closing price during periodic maintainance.`}</div>
             <table className="table table-bordered text-center">

@@ -24,7 +24,7 @@ const Products = () => {
         "Capital Management",
         "Trade Management",
         "Difference between different trading and investment types and which is best suitable for you",
-        "How to be safe from noise around you (general public opinions about the market)"
+        "How to be safe from noise around you (general public opinions about the market)",
       ],
       descTitle2: "Key Features",
       desc2: [
@@ -39,6 +39,7 @@ const Products = () => {
         "Affordable enrollment fees",
         "Training Mode: Online",
       ],
+      formLink: "https://forms.gle/iiSRNkWKWGBtbH1G8",
     },
     {
       icon: robot,
@@ -66,6 +67,7 @@ const Products = () => {
         "Affordable enrollment fees",
         "Training Mode: Online",
       ],
+      formLink: "https://forms.gle/L45NGzhSkJe6qQB59",
     },
     {
       icon: algo,
@@ -81,14 +83,17 @@ const Products = () => {
         "Automated SL/Target calculation and order placement*",
         "Affordable subscriptions",
       ],
+      formLink: "https://forms.gle/HC1F8dNSG2y53G2V7",
     },
   ];
 
-  const returnCard = (item) => {
+  const returnCard = (item, index) => {
     return (
       <div className="card-container d-flex flex-column position-relative">
         {item.badge && (
-          <div className="position-absolute top-0 end-0 m-2 badge">{item.badge}</div>
+          <div className="position-absolute top-0 end-0 m-2 badge">
+            {item.badge}
+          </div>
         )}
         <div className="feature-icon-container">
           <img className="feature-icon" src={item.icon} alt={item.title} />
@@ -115,11 +120,23 @@ const Products = () => {
             </ul>
           </div>
         )}
-        <div className={`btn-container ${isDesktop && "mt-auto"}`}>
-          <Link to="/" className="btn btn-dark">
-            Check Details
-          </Link>
-        </div>
+        {index < 2 && (
+          <div className={`btn-container ${isDesktop && "mt-auto"}`}>
+            <Link className="btn btn-dark" to={item.formLink} target="_blank">
+              Enroll
+            </Link>
+            <Link to="/" className="btn btn-dark product-btn-margin">
+              Check Details
+            </Link>
+          </div>
+        )}
+        {index === 2 && (
+          <div className={`btn-container ${isDesktop && "mt-auto"}`}>
+            <Link className="btn btn-dark" to={item.formLink} target="_blank">
+              Notify me
+            </Link>
+          </div>
+        )}
       </div>
     );
   };
@@ -133,7 +150,7 @@ const Products = () => {
               key={index}
               style={{ flexBasis: `calc(30% - 10px)`, marginBottom: 10 }}
             >
-              {returnCard(item)}
+              {returnCard(item, index)}
             </div>
           ))}
         </div>
@@ -142,7 +159,7 @@ const Products = () => {
           {data.map((item, index) => (
             <div className="w-100 mt-4 justify-content-center">
               <div key={index} className="mb-4">
-                <div className="w-100">{returnCard(item)}</div>
+                <div className="w-100">{returnCard(item, index)}</div>
               </div>
             </div>
           ))}

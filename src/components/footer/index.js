@@ -16,11 +16,21 @@ const Footer = () => {
         {/* Left Column */}
         <div className="col-sm-1 d-none d-sm-block" />
         {/* Center Column */}
-        <div className={`col-sm-10 d-flex ${!isDesktop && 'flex-column'}`}>
+        <div className={`col-sm-10 d-flex ${!isDesktop && "flex-column"}`}>
           <div>
             <div className="medium">Contact Us</div>
             <div>+91 9284298715</div>
             <div>support@algotradetech.com</div>
+            <div className="have-query medium">
+              Have a query?{" "}
+              <a
+                className="submit-here medium"
+                href="https://forms.gle/QXbwrW9f9EM7moDG6"
+                target="_blank"
+              >
+                Submit here
+              </a>
+            </div>
             <Social isFooter={true} />
             <img
               src={logo}
@@ -38,7 +48,9 @@ const Footer = () => {
           </div>
           <Divider isVertical={true} classes="divider" />
           <div className={!isDesktop && "mt-3"}>
-            <p className={isDesktop ? "footer-content" : "footer-content-mobile"}>
+            <p
+              className={isDesktop ? "footer-content" : "footer-content-mobile"}
+            >
               <span className="fw-bold text-decoration-underline">
                 Disclaimer :
               </span>{" "}
@@ -46,7 +58,9 @@ const Footer = () => {
               all the related documents carefully before investing as prescribed
               by SEBI. Issued in the interest of the investors.
             </p>
-            <p className={isDesktop ? "footer-content" : "footer-content-mobile"}>
+            <p
+              className={isDesktop ? "footer-content" : "footer-content-mobile"}
+            >
               <span className="fw-bold text-decoration-underline">Note :</span>{" "}
               It is important to note that our platform is not SEBI (Securities
               and Exchange Board of India) registered. While we strive to
